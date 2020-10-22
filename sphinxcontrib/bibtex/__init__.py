@@ -75,7 +75,7 @@ def process_citation_references(app, doctree, docname):
             text = node[0].astext()
             key = text[1:-1]
             label = app.env.bibtex_cache.get_label_from_key(key)
-            node[0] = docutils.nodes.Text('[' + label + ']')
+            node[0] = docutils.nodes.Text('(' + label + ')')
 
 
 def check_duplicate_labels(app, env):
